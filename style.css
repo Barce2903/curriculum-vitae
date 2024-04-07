@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap');
+
+@media (min-width: 540px) {
+  /* Pour un écran >= 540px, cette classe CSS s'applique */
+  .container {
+    width: 300px;
+  }
+
+  @media (min-width: 720px) {
+    /* Pour un écran >= 720px, cette classe CSS s'applique */
+    .container {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    /* Pour un écran >= 960px, cette classe CSS s'applique */
+    .container {
+      width: 900px;
+    }
+  }
+}
+
+body {
+  background: #F7F9FC;
+}
+
+.container {
+  margin: 20px auto;
+  box-sizing: border-box;
+  color: #575F7D;
+  /* Configuration google-fonts */
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  /* Configuration google-fonts */
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner, .category {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.languages {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.circles {
+  font-size: 0.5em;
+}
+.languages > h5, .languages > p, .languages > .circles {
+  margin-right: 5%;
+}
+
+h1, h2, h3, h4, h5 {
+  /* Configuration google-fonts */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  /* Configuration google-fonts */
+  margin: 10px 0;
+}
+h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+p, li {
+  font-size: smaller;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+  object-position: 50%;
+}
