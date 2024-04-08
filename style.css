@@ -3,7 +3,7 @@
 @media (min-width: 1px) {
   /* Pour un écran >= 540px, cette classe CSS s'applique */
   .container {
-    width: 305px;
+    width: auto;
     font-size: smaller;
   }
   #card-languages {
@@ -16,14 +16,14 @@
 @media (min-width: 720px) {
   /* Pour un écran >= 720px, cette classe CSS s'applique */
   .container {
-    width: 500px;
+    width: 750px;
     font-size: medium;
   }
   #card-languages {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
   }
-  .languages {width: 100%;}
+  .languages {width: 50%;}
 }
 
 @media (min-width: 960px) {
