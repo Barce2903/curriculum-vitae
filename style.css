@@ -3,7 +3,7 @@
 @media (min-width: 1px) {
   /* Pour un écran >= 540px, cette classe CSS s'applique */
   .container {
-    width: 300px;
+    width: 305px;
     font-size: smaller;
   }
   #card-languages {
