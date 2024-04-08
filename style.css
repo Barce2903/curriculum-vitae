@@ -1,24 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap');
 
-@media (min-width: 540px) {
+@media (min-width: 1px) {
   /* Pour un écran >= 540px, cette classe CSS s'applique */
   .container {
     width: 300px;
+    font-size: smaller;
   }
+  #card-languages {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .languages {width: 100%;}
+}
 
-  @media (min-width: 720px) {
-    /* Pour un écran >= 720px, cette classe CSS s'applique */
-    .container {
-      width: 500px;
-    }
+@media (min-width: 720px) {
+  /* Pour un écran >= 720px, cette classe CSS s'applique */
+  .container {
+    width: 500px;
+    font-size: medium;
   }
+  #card-languages {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .languages {width: 100%;}
+}
 
-  @media (min-width: 960px) {
-    /* Pour un écran >= 960px, cette classe CSS s'applique */
-    .container {
-      width: 900px;
-    }
+@media (min-width: 960px) {
+  /* Pour un écran >= 960px, cette classe CSS s'applique */
+  .container {
+    width: 900px;
+    font-size: medium;
   }
+  #card-languages {
+    flex-direction: row;
+    justify-content: left;
+  }
+  .languages {width: 30%;}
 }
 
 body {
@@ -53,8 +71,9 @@ body {
   justify-content: space-between;
 }
 
+.date {text-align: center;}
+
 .languages {
-  width: 30%;
   display: flex;
   align-items: center;
 }
