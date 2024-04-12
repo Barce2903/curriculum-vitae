@@ -6,11 +6,6 @@
     width: auto;
     font-size: smaller;
   }
-  #card-languages {
-    flex-direction: column;
-    justify-content: left;
-  }
-  .languages {width: 100%;}
 }
 
 @media (min-width: 720px) {
@@ -19,11 +14,6 @@
     width: 750px;
     font-size: medium;
   }
-  #card-languages {
-    flex-direction: row;
-    justify-content: left;
-  }
-  .languages {width: 50%;}
 }
 
 @media (min-width: 960px) {
@@ -32,11 +22,6 @@
     width: 900px;
     font-size: medium;
   }
-  #card-languages {
-    flex-direction: row;
-    justify-content: left;
-  }
-  .languages {width: 30%;}
 }
 
 body {
@@ -54,7 +39,7 @@ body {
   /* Configuration google-fonts */
 }
 
-.banner {
+.banner, .date {
   text-align: center;
 }
 
@@ -66,22 +51,31 @@ body {
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
 }
 
-.card {
+.card, .languages {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
-.date {text-align: center;}
-
-.languages {
-  display: flex;
-  align-items: center;
+.languages, #card-languages {
+  gap: 0 15px;
 }
+
+#card-languages {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .circles {
   font-size: 0.5em;
 }
-.languages > h5, .languages > p, .languages > .circles {
-  margin-right: 5%;
+
+.img-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+  object-position: 50%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -106,12 +100,4 @@ p, li {
 
 ul {
   padding-left: 1em;
-}
-
-.img-circle {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: scale-down;
-  object-position: 50%;
 }
