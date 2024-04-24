@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap');
 
 @media (min-width: 1px) {
-  /* Pour un écran >= 540px, cette classe CSS s'applique */
+  /* Pour un écran >= 1px, cette classe CSS s'applique */
   .container {
     width: auto;
     font-size: smaller;
