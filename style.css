@@ -55,6 +55,8 @@ body {
 }
 
 .banner {
+  background-image: url("images/background.png");
+  background-size: cover;
   text-align: center;
 }
 
@@ -110,8 +112,6 @@ ul {
 
 .img-circle {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: scale-down;
-  object-position: 50%;
+  width: 110px;
+  height: 110px;
 }
