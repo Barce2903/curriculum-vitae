@@ -24,6 +24,13 @@
   }
 }
 
+@media print
+{
+  .category {
+    break-inside: avoid;
+  }
+}
+
 body {
   background: #F7F9FC;
 }
