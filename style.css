@@ -29,7 +29,7 @@
   /* Pour l'impression, cette classe CSS s'applique */
   .container {
     width: 100%;
-    font-size: medium;
+    font-size: small;
   }
 }
 
