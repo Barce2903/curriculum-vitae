@@ -31,6 +31,12 @@
     width: 100%;
     font-size: small;
   }
+  /* Evite que la section d'après soit coupée */
+  .print-only {
+    page-break-after: always;
+    break-after: page;
+    display: block !important;
+  }
 }
 
 body {
