@@ -1,128 +1,195 @@
+/* Cette règle importe une feuille de style externe (ici, des polices Google Fonts). */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap&family=Roboto:wght@300&display=swap');
 
+/* --- MEDIA QUERIES --- */
+
+/* Applique des styles si la largeur d'écran est d'au moins 1 pixel (styles de base). */
 @media (min-width: 1px) {
-  /* Pour un écran >= 1px, cette classe CSS s'applique */
-  .container {
-    width: auto;
-    font-size: smaller;
-  }
+
+ /* Pour un écran >= 1px, cette classe CSS s'applique */
+/* Ce sélecteur cible le conteneur principal du contenu. */
+ .container {
+  width: auto;
+  font-size: smaller;
+ }
 }
 
+/* Applique des styles si la largeur d'écran est d'au moins 720 pixels. */
 @media (min-width: 720px) {
-  /* Pour un écran >= 720px, cette classe CSS s'applique */
-  .container {
-    width: 750px;
-    font-size: medium;
-  }
+
+ /* Pour un écran >= 720px, cette classe CSS s'applique */
+ .container {
+  width: 750px;
+  font-size: medium;
+ }
 }
 
+/* Applique des styles si la largeur d'écran est d'au moins 960 pixels. */
 @media (min-width: 960px) {
-  /* Pour un écran >= 960px, cette classe CSS s'applique */
-  .container {
-    width: 900px;
-    font-size: medium;
-  }
+
+ /* Pour un écran >= 960px, cette classe CSS s'applique */
+ .container {
+  width: 900px;
+ }
 }
 
-@media print
-{
-  /* Pour l'impression, cette classe CSS s'applique */
-  .container {
-    width: 100%;
-    font-size: small;
-  }
-  /* Evite que la section d'après soit coupée */
-  .print-only {
-    page-break-after: always;
-    break-after: page;
-    display: block !important;
-  }
+/* Applique des styles uniquement lorsque le document est imprimé. */
+@media print {
+
+ /* Pour l'impression, cette classe CSS s'applique */
+ .container {
+  width: 100%;
+  font-size: small;
+ }
+
+ /* Force le saut de page après la section Expériences (print-only) */
+/* Ce sélecteur cible un élément pour forcer un saut de page et l'afficher en impression. */
+ .print-only {
+  page-break-after: always;
+  break-after: page;
+  display: block !important;
+ }
 }
 
+/* Ce sélecteur cible l'arrière-plan de toute la page. */
 body {
-  background: #F7F9FC;
+ background: #F7F9FC;
 }
 
+/* Ce sélecteur gère le centrage du conteneur et les propriétés de police de base. */
 .container {
-  margin: 20px auto;
-  box-sizing: border-box;
-  color: #575F7D;
-  /* Configuration google-fonts */
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  /* Configuration google-fonts */
+ margin: 20px auto;
+ box-sizing: border-box;
+ color: #575F7D;
+ /* Configuration google-fonts */
+ font-family: "Roboto", sans-serif;
+ font-style: normal;
 }
 
+/* Ce sélecteur stylise l'en-tête (banner) avec une image de fond et un centrage du texte. */
 .banner {
-  background-image: url("images/background.png");
-  background-size: cover;
-  text-align: center;
+ background-image: url("images/background.png");
+ background-size: cover;
+ text-align: center;
 }
 
-.banner, .category {
-  margin: 20px 0;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+/* Ce sélecteur groupé applique des styles d'ombre, de marge et d'arrière-plan à la bannière et aux sections de catégorie. */
+.banner,
+.category {
+ margin: 20px 0;
+ padding: 10px;
+ border-radius: 4px;
+ background-color: white;
+ box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.date, .card, .languages {
-  display: flex;
+/* Ce sélecteur groupé active Flexbox pour aligner et disposer les éléments enfants. */
+.date,
+.card,
+.languages {
+ display: flex;
 }
 
+/* Ce sélecteur stylise le bloc des informations de contact (taille de police et espacement des lignes). */
+.contact-info {
+  font-size: smaller;
+  line-height: 1.5;
+}
+
+/* Ce sélecteur ajoute un séparateur (une puce) après chaque élément de contact, sauf le dernier. */
+.contact-info .contact-item:not(:last-child)::after {
+  content: " \2022";
+  padding: 0 8px;
+}
+
+/* Ce sélecteur arrange les éléments de date verticalement et aligne le texte à droite. */
 .date {
-  flex-direction: column;
+ flex-direction: column;
+ text-align: right;
 }
 
-.card, .languages {
-  justify-content: space-between;
-  align-items: baseline;
+/* Ce sélecteur organise les éléments d'une carte (expérience/formation) pour les espacer uniformément. */
+.card {
+ justify-content: space-between;
+ align-items: baseline;
 }
 
-.languages, #card-languages {
-  gap: 0 15px;
+/* Ce sélecteur stylise le nom de la ville dans le bloc de date. */
+.date .city {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
+/* Ce sélecteur stylise la période de date. */
+.date .date-period {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Ce sélecteur stylise le séparateur entre les dates, en le centrant verticalement. */
+.date .date-separator {
+  margin: 0;
+  align-self: center;
+  line-height: 1;
+}
+
+/* Ce sélecteur aligne les éléments de langue avec un espacement entre eux. */
+.languages {
+ gap: 15px;
+ align-items: center;
+}
+
+/* Ce sélecteur permet aux cartes de langue de passer à la ligne si l'espace est insuffisant. */
 #card-languages {
   flex-wrap: wrap;
   justify-content: flex-start;
+  gap: 20px;
 }
 
+
+/* Ce sélecteur réduit la taille de la police pour les indicateurs visuels. */
 .circles {
-  font-size: 0.5em;
+ font-size: 0.5em;
 }
 
+/* Ce sélecteur transforme une image en cercle. */
 .img-circle {
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
+ border-radius: 50%;
+ width: 110px;
+ height: 110px;
 }
 
-h1, h2, h3, h4, h5 {
-  /* Configuration google-fonts */
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  /* Configuration google-fonts */
-  margin: 10px 0;
-}
-
-h3 {
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
-  margin-top: 0;
-}
-
+/* Ce sélecteur définit les propriétés de police pour tous les titres HTML (h1 à h5). */
+h1,
+h2,
+h3,
+h4,
 h5 {
-  font-weight: 500;
+ font-family: "Open Sans", sans-serif;
+ font-weight: 700;
+ font-style: normal;
+ margin: 10px 0;
 }
 
-p, li {
-  font-size: smaller;
+/* Ce sélecteur ajoute une ligne de séparation sous les titres de niveau 3. */
+h3 {
+ border-bottom: 1px solid black;
+ padding-bottom: 5px;
+ margin-top: 0;
 }
 
+/* Ce sélecteur définit l'épaisseur de la police pour les titres de niveau 5. */
+h5 {
+ font-weight: 500;
+}
+
+/* Ce sélecteur définit la taille de police pour les paragraphes et les éléments de liste. */
+p,
+li {
+ font-size: smaller;
+}
+
+/* Ce sélecteur ajoute un retrait à gauche pour les listes non ordonnées. */
 ul {
-  padding-left: 1em;
+ padding-left: 1em;
 }
